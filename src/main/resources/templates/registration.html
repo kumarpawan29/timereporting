@@ -1,0 +1,61 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+      
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Time Reporting</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet"  th:href="@{/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" 	th:href="@{/css/style.css}"/>
+	</head>
+	<body>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+			<a class="navbar-brand" href="#">Time Reporting</a>
+			<div class="collapse navbar-collapse navbar-right" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+						<a class="nav-item nav-link" href="/login">Login</a>
+				</div> 
+			</div>
+		</nav>
+	<div class="registration-block">
+		<h1 class="h3 font-weight-normal">Registration</h1>
+		<h3 class="h3 font-weight-normal">create a new account</h3>
+			<form autocomplete="off" action="#" th:action="@{/registration}"
+				th:object="${employee}" method="post" class="form-horizontal" role="form">
+				 <div class="row form-group">
+					<div class="col-md-12">
+						<input type="text" th:field="*{name}" placeholder="Full Name" class="form-control"/>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-md-12">
+						<label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+						class="validation-message"></label>
+						<input type="text" th:field="*{email}" placeholder="Email" class="form-control"/>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-md-12">
+						<label th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+						class="validation-message"></label>
+						<input type="password" th:field="*{password}" placeholder="Password" class="form-control" size="35"/>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="center">
+						<button type="submit" class="btn btn-primary">Register User</button>
+					</div>
+				</div>
+				<h2><span class="text-success" th:utext="${successMessage}"></span></h2>	
+			</form>
+	</div>
+	
+	
+    <script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+        
+	</body>
+</html>
+

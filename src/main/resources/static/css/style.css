@@ -1,0 +1,28 @@
+.registration-block{
+	margin-left:250px;
+	margin-right:250px;
+} 
+.form-control{
+	width: 50%;
+}
+
+label{
+	font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}

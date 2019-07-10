@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+      
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Time Reporting | Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  th:href="@{/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" 	th:href="@{/css/style.css}"/> 
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+			<a class="navbar-brand" href="#">Time Reporting</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    				<span class="navbar-toggler-icon"></span>
+    			</button>
+			<div class="collapse navbar-collapse navbar-right" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link active" href="/timereporting/home">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-item nav-link" href="/timereporting/status">Reporting Status</a>
+						<a class="nav-item nav-link" href="/timereporting/logout">Logout</a>
+				</div> 
+			</div>
+		</nav>
+		
+		<div class="container">
+			<h5 class="text-center">Please select Year & Month for submitting hours for respective weeks.</h5>
+				<div class="container">
+				
+					<div class="row" style="background:#fff3f3">
+						<div class="col-sm">
+							<label for="year">Year:</label>
+							<select class="form-control" id="years"></select>
+						</div>
+						<div class="col-sm">
+							<label for="month">Month:</label>
+							<select class="form-control" id="months"></select>
+						</div>
+						<div class="col-sm">
+							<p id="status">Please submit your hours.
+						</div>
+					</div>
+					
+					<div class="row" style="background:#c7ebeb">
+						<div class="col-sm">
+							<h3>Week 1 :</h3>
+						</div>
+						<div class="col-sm">
+							<label for="month">Hours:</label>
+							<select class="form-control" id="hoursForWeek1"></select>
+						</div>
+						<div class="col-sm">
+							<label for="month">Minutes:</label>
+							<select class="form-control" id="minutesForWeek1"></select>
+						</div>
+					</div>
+					<div class="row" style="background:#fff3f3">
+						<div class="col-sm">
+							<h3>Week 2 :</h3>
+						</div>
+						<div class="col-sm">
+							<label for="month">Hours:</label>
+							<select class="form-control" id="hoursForWeek2"></select>
+						</div>
+						<div class="col-sm">
+							<label for="month">Minutes:</label>
+							<select class="form-control" id="minutesForWeek2"></select>
+						</div>
+					</div>
+					<div class="row" style="background:#c7ebeb">
+						<div class="col-sm">
+							<h3>Week 3 :</h3>
+						</div>
+						<div class="col-sm">
+							<label for="month">Hours:</label>
+							<select class="form-control" id="hoursForWeek3"></select>
+						</div>
+						<div class="col-sm">
+							<label for="month">Minutes:</label>
+							<select class="form-control" id="minutesForWeek3"></select>
+						</div>
+					</div>
+					<div class="row" style="background:#fff3f3">
+						<div class="col-sm">
+							<h3>Week 4 :</h3>
+						</div>
+						<div class="col-sm">
+							<label for="month">Hours:</label>
+							<select class="form-control" id="hoursForWeek4"></select>
+						</div>
+						<div class="col-sm">
+							<label for="month">Minutes:</label>
+							<select class="form-control" id="minutesForWeek4"></select>
+						</div>
+					</div>
+					<div class="wrapper">
+						<button type="button" id="addtime" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Submit</button>
+					</div>
+				</div>
+		</div>
+		
+		<!-- Modal -->
+		  <div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+		    
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Thank You!</h4>
+		        </div>
+		        <div class="modal-body">
+		          <p>Thank you for submitting your efforts hours.</p>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		      </div>
+      
+    </div>
+  </div>
+		
+	<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/main.js}"></script>
+	</body>
+</html>

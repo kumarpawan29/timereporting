@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Time Reporting | Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  th:href="@{/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" 	th:href="@{/css/style.css}"/> 
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+			<a class="navbar-brand" href="#">Time Reporting</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    				<span class="navbar-toggler-icon"></span>
+    			</button>
+			<div class="collapse navbar-collapse navbar-right" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link active" href="/timereporting/home">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-item nav-link" href="/timereporting/status">Reporting Status</a>
+						<a class="nav-item nav-link" href="#">My Profile</a>
+						<a class="nav-item nav-link" href="/timereporting/logout">Logout</a>
+				</div> 
+			</div>
+		</nav>
+		
+		<div class="container">
+			<div class="row">
+				<div class="text-center">
+					<h2>Thank You ! <span th:utext="${userName}"></h2>                        
+					<p th:utext="${message}"></p>
+					<a href="/login" style="color: black" class="btn btn-primary">Login</a>
+					<a href="/registration" style="color: black" class="btn btn-primary">Registration</a>
+    			</div>
+			</div>
+		</div>
+		
+	<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/main.js}"></script>
+	</body>
+</html>
+
