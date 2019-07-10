@@ -68,6 +68,7 @@ to run this **Time Reporting** built using *Spring Boot* we will need to first b
 **Time Reporting** application can be run in two ways: 
 1. **java -jar command** : The commond *java -jar target/timereporting-0.0.1-SNAPSHOT.jar* can be used to run.
 2. **Run Spring Boot app using Maven** :  To run the application with Maven plugin use *mvn spring-boot:run*
+The application will be running at http://localhost:8080/login .
 
 **Note :** Additional settings in *application.properties* file.
 To generate reports, two folder paths need to be set.
