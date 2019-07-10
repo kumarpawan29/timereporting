@@ -53,12 +53,6 @@ public class UserController {
 
 	@GetMapping("/timereporting/status")
     public ModelAndView status(){
-		/*
-		 * Authentication authentication =
-		 * SecurityContextHolder.getContext().getAuthentication(); String email =
-		 * authentication.getName(); Employee employee =
-		 * employeeService.findEmployeeByEmail(email);
-		 */
 		
 		Employee employee = employeeService.getLoggedInEmployee();
 		

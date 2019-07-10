@@ -73,12 +73,6 @@ public class DataController {
 		String year = loadMonthYearRequest.getYear();
 		String month = loadMonthYearRequest.getMonth();
 
-		/*
-		 * Authentication authentication =
-		 * SecurityContextHolder.getContext().getAuthentication(); String email =
-		 * authentication.getName(); Employee userExists =
-		 * employeeService.findEmployeeByEmail(email);
-		 */
 		Employee userExists = employeeService.getLoggedInEmployee();
 		
 		List<Hours> hoursList = hoursRepository.findByReferencePk(userExists.getReference());

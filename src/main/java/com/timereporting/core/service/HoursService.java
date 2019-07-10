@@ -31,12 +31,6 @@ public class HoursService {
 	}
 	
 	public Hours saveHours(TimeInformation timeInformation) {
-		/*
-		 * Authentication authentication =
-		 * SecurityContextHolder.getContext().getAuthentication(); String email =
-		 * authentication.getName(); Employee userExists =
-		 * userService.findEmployeeByEmail(email);
-		 */
 		
 		Employee userExists = employeeService.getLoggedInEmployee();
 		
