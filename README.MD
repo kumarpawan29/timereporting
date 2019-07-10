@@ -55,7 +55,7 @@ For installing Java, refer to https://java.com/en/download/help/index_installing
 
 To install MySQL, refer to https://dev.mysql.com/downloads/installer/
 After installing MySQL, create database(timereporting).
-and configure the MySQL properties in *application.properties* of the application.
+and configure the MySQL properties(username & password) in *application.properties* of the application.
 
 Now about installing Application Server (Tomcat), by default Starter Web includes a dependency on starter tomcat. Starter Tomcat brings in all the dependencies need to run Tomcat as an embedded server.When we will run *TimereportingApplication.java* as a Java Application, you would see that the server would start up and start serving requests.
 
@@ -68,6 +68,7 @@ to run this **Time Reporting** built using *Spring Boot* we will need to first b
 **Time Reporting** application can be run in two ways: 
 1. **java -jar command** : The commond *java -jar target/timereporting-0.0.1-SNAPSHOT.jar* can be used to run.
 2. **Run Spring Boot app using Maven** :  To run the application with Maven plugin use *mvn spring-boot:run*
+The application will be running at http://localhost:8080/login .
 
 **Note :** Additional settings in *application.properties* file.
 To generate reports, two folder paths need to be set.
