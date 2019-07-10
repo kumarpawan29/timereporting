@@ -55,7 +55,7 @@ For installing Java, refer to https://java.com/en/download/help/index_installing
 
 To install MySQL, refer to https://dev.mysql.com/downloads/installer/
 After installing MySQL, create database(timereporting).
-and configure the MySQL properties in *application.properties* of the application.
+and configure the MySQL properties(username & password) in *application.properties* of the application.
 
 Now about installing Application Server (Tomcat), by default Starter Web includes a dependency on starter tomcat. Starter Tomcat brings in all the dependencies need to run Tomcat as an embedded server.When we will run *TimereportingApplication.java* as a Java Application, you would see that the server would start up and start serving requests.
 
